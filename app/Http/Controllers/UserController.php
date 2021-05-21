@@ -82,4 +82,10 @@ class UserController extends Controller
     {
         //
     }
+
+    public function loginView()
+    {
+        return view('/login');
+    }
+
 }

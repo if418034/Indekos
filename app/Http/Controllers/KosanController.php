@@ -22,7 +22,7 @@ class KosanController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -40,7 +40,7 @@ class KosanController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show(Kosan $kosan)
@@ -51,7 +51,7 @@ class KosanController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -62,7 +62,7 @@ class KosanController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -82,7 +82,7 @@ class KosanController extends Controller
         $details = DB::table('users as u')
             ->join('kosans as k', 'u.id', '=', 'k.user_id')
             ->select('u.nama as userNama', 'u.alamat as userAlamat', 'u.telepon as userTelepon', 'u.email as userEmail'
-            ,'k.id as kosanId' , 'k.nama as kosanNama', 'k.alamat as kosanAlamat', 'k.foto as kosanFoto', 'k.harga as kosanHarga', 'k.deskripsi as kosanDeskripsi', 'k.jumlah as kosanJumlah', 'k.masa_aktif as kosanMasaAktif')
+                , 'k.id as kosanId', 'k.nama as kosanNama', 'k.alamat as kosanAlamat', 'k.foto as kosanFoto', 'k.harga as kosanHarga', 'k.deskripsi as kosanDeskripsi', 'k.jumlah as kosanJumlah', 'k.masa_aktif as kosanMasaAktif')
             ->get();
 
         return view('/Admin/kostAdmin', compact('details'));
@@ -92,7 +92,7 @@ class KosanController extends Controller
     {
         $owners = User::all()->where('pemilik', 1);
 
-        return view('Admin.tambahKostAdmin', compact ('owners'));
+        return view('Admin.tambahKostAdmin', compact('owners'));
     }
 
     public function tambahKost(Request $request)

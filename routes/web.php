@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KosanController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\GoogleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +19,8 @@ use App\Http\Controllers\KosanController;
 Route::get('/', function () {
     return view('/Pengunjung/home');
 });
+
+Route::get('/loginView', [UserController::class, 'loginView']);
 
 Route::get('/profil', function () {
     return view('/Pengunjung/profil');
@@ -42,6 +46,7 @@ Route::get('/listPemilikKos', [KosanController::class, 'kostOwner']);
 Route::get('/pesan', function () {
     return view('/Pengunjung/pesan');
 });
+
 Route::get('/historypengunjung', function () {
     return view('/Pengunjung/historypengunjung');
 });
@@ -49,6 +54,7 @@ Route::get('/historypengunjung', function () {
 //Route::get('/pemilikkost', function () {
 //    return view('/Pengunjung/pemilikkost');
 //});
+
 //
 Route::get('/berandaPengguna', function () {
     return view('/Pengguna/berandaPengguna');
@@ -110,4 +116,8 @@ Route::post('/postTambahKost', [KosanController::class, 'tambahKost']);
 Route::post('/postTambahPemilikKost', [KosanController::class, 'tambahPemilikKost']);
 Route::get('/deleteKost/{id}', [KosanController::class, 'hapusKost']);
 Route::get('/editKost/{id}', [KosanController::class, 'editKost']);
+
+Route::get('auth/google', [GoogleController::class, 'redirectToGoogle']);
+Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
+
 

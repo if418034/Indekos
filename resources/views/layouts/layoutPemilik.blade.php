@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   @yield('title')
-  
+
   <!-- FAVICON -->
   <link href="img/favicon.png" rel="shortcut icon">
   <!-- PLUGINS CSS STYLE -->
@@ -26,7 +26,7 @@
   <!-- CUSTOM CSS -->
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="css/fullcalendar.min.css" />
-  
+
 
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -155,8 +155,8 @@
                 background: linear-gradient(59deg, #104475, #2B6BA7);
                 color: white;
             }
-          
-        
+
+
   </style>
 
 </head>
@@ -214,8 +214,8 @@
 				<div class="content-block">
 					<p>SELAMAT DATANG DI INDEKOST</p>
 					<p>LAKUKAN PESANAN DAN NIKMATI FASILITASNYA</p>
-					
-					
+
+
 				</div>
 				<!-- Advance Search -->
 				<div class="advance-search" style="box-shadow: 2px 2px 2px #02529B;padding: 10px;border: 0px dashed red;" id="fas">
@@ -224,29 +224,9 @@
 								<div class="col-lg-12 col-md-12 align-content-center">
 										<form>
 											<div class="form-row">
-												<div class="form-group col-md-2" >
-                                                    <li class="list-inline-item">
-								                        <a href="#"><i class="fa fa-tags"></i><br> Fasilitas</a>
-                                                    </li>
-												</div>
-												<div class="form-group col-md-3">
-                                                    <li class="list-inline-item">
-								                        <a href="#"><i class="fa fa-line-chart"></i><br> Grafik Peminat Kost</a>
-                                                    </li>
-												</div>
-												<div class="form-group col-md-2">
-                                                    <li class="list-inline-item">
-								                        <a href="#"><i class="fa fa-percent"></i><br> Potongan rata-rata <br>(Tahun)</a>
-                                                    </li>
-												</div>
-												<div class="form-group col-md-3">
+												<div class="form-group col-md-12">
                                                     <li class="list-inline-item">
 								                        <a href="#"><i class="fa fa-group"></i><br> Pemilik Kost</a>
-                                                    </li>
-												</div>
-                                                <div class="form-group col-md-2">
-                                                    <li class="list-inline-item">
-								                        <a href="#"><i class="fa fa-map-o"></i><br> Map-VIEW</a>
                                                     </li>
 												</div>
 											</div>
@@ -255,7 +235,7 @@
 								</div>
 					</div>
 				</div>
-				
+
 			</div>
 		</div>
 	</div>
@@ -317,7 +297,7 @@
                             <li>
                                 <a href="#" class="icoWhatshapp" title="Whatsapp"><i class="fa fa-whatsapp"></i></a>0822 - xxxx - xxxx
                             </li>
-                        </ul>				
+                        </ul>
                     </div>
                 </div>
                 <div class="row">
@@ -392,7 +372,7 @@ $(document).ready(function () {
             }
             calendar.fullCalendar('unselect');
         },
-        
+
         editable: true,
         eventDrop: function (event, delta) {
                     var start = $.fullCalendar.formatDate(event.start, "Y-MM-DD HH:mm:ss");

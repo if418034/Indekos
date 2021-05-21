@@ -190,7 +190,7 @@
 								<a class="nav-link" href="#">Profil</a>
 							</li>
                             <li class="nav-item ">
-								<a class="nav-link" href="#">Keluar</a>
+								<a class="nav-link" href="{{url('/loginView')}}">Keluar</a>
 							</li>
 						</ul>
 					</div>
@@ -243,9 +243,9 @@
                 <div class="row">
                 <div class="col-md-3">
                     <!--Column1-->
-                    <div class="footer-pad">
-                        <a><img src="/img/logo.png" alt="#" style="width: 100%;height: 100%;"></a>
-                    </div>
+{{--                    <div class="footer-pad">--}}
+{{--                        <a><img src="/img/logo.png" alt="#" style="width: 100%;height: 100%;"></a>--}}
+{{--                    </div>--}}
                 </div>
                 <div class="col-md-6" id="comment_form">
                     <!--Column1-->
